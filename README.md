@@ -2,7 +2,11 @@
 
 This is a web app where you upload a CSV or Excel file, describe in plain English what you want to find (like "email addresses"), and it replaces all the matches with whatever you want. The pattern matching is done by turning your description into a regex with an LLM, and the actual replacement runs in the background with Spark so it can handle big files.
 
-## Demo
+## Live Demo
+
+https://rhombus-two.vercel.app/
+
+## Demo Video
 
 https://youtu.be/HKKAMtLz8cQ?si=04jRm4aTDCeX0G_g
 

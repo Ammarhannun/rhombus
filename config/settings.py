@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-w@^oiacs)gb=3yox*mi0&$4+kn
 
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,rhombus-fyo7.onrender.com').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -84,6 +84,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'https://rhombus-two.vercel.app',
 ]
 CORS_ALLOW_ALL_ORIGINS = DEBUG
 
