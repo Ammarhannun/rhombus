@@ -22,15 +22,15 @@ Redis ends up doing three jobs here: Celery broker, Celery result backend, and t
 
 Instead of looping over the rows in pandas one at a time, Spark loads the file into partitions and runs the regex replace across all of them at once, so it uses all the cores. Because replacing text in a row doesn't depend on any other row, there's no shuffling needed and it just scales with how many partitions/cores you have. When I tested a 1 million row file it split into 8 partitions and finished in about 10 seconds. If you ever needed more you'd point it at a real Spark cluster instead of `local[*]`.
 
-There's also a pandas fallback in the engine. That's just so it still runs on my machine when I don't have the Java/Spark stuff installed locally — in Docker it uses real Spark.
+There's also a pandas fallback in the engine. That's just so it still runs on my machine when I don't have the Java/Spark stuff installed locally : in Docker it uses real Spark.
 
 ## The API
 
-- `POST /api/columns/` — send a file, get its column names back
-- `POST /api/jobs/` — send the file + prompt + columns, get a job id straight away
-- `GET /api/jobs/<id>/` — check status and progress
-- `GET /api/jobs/<id>/results/?page=&page_size=` — get the processed rows, paged
-- `POST /api/jobs/<id>/cancel/` — cancel a job that's running
+- `POST /api/columns/` : send a file, get its column names back
+- `POST /api/jobs/` : send the file + prompt + columns, get a job id straight away
+- `GET /api/jobs/<id>/` : check status and progress
+- `GET /api/jobs/<id>/results/?page=&page_size=` : get the processed rows, paged
+- `POST /api/jobs/<id>/cancel/` : cancel a job that's running
 
 ## Running it with Docker
 
