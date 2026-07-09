@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+media/
+frontend/node_modules/
+frontend/dist/
+.DS_Store
+*.log
+big.csv
+GUIDE.md

@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff7f0;
+  color: #333;
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 16px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #e8620c;
+}
+
+.header p {
+  margin: 5px 0 25px;
+  color: #777;
+  font-size: 14px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #f0d3bd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.field > span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='file'] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border: 1px solid #e8620c;
+  background: #fff;
+  color: #e8620c;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chip.active {
+  background: #e8620c;
+  color: #fff;
+}
+
+.btn {
+  padding: 9px 16px;
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: #e8620c;
+  border-color: #e8620c;
+  color: #fff;
+}
+
+.btn.primary:hover:not(:disabled) {
+  background: #cc540a;
+}
+
+.muted {
+  color: #888;
+  font-size: 13px;
+}
+
+.mono {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.error {
+  color: #c00;
+  font-size: 14px;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 0 6px;
+  font-weight: bold;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.badge.queued { background: #ddd; }
+.badge.running { background: #e8620c; color: #fff; }
+.badge.success { background: #2e8b2e; color: #fff; }
+.badge.failed { background: #c00; color: #fff; }
+.badge.cancelled { background: #999; color: #fff; }
+
+.progress-bar {
+  height: 16px;
+  background: #f0e0d5;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #e8620c;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.results-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #fbeee3;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
